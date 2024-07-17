@@ -27,16 +27,17 @@ while True:
         break
     else:
         s.push(peso)
-   
+
 peso_desejado = int(input())
 
-peso_total = removido = s.pop()
-qtd = 1
-print(f'Peso retirado: {removido}')
-while peso_desejado != removido and not s.isEmpty():
-    removido = s.pop()
-    print(f'Peso retirado: {removido}')
-    qtd += 1
-    peso_total += removido
-print(f'Anilhas retiradas: {qtd}')
-print(f'Peso total movimentado: {peso_total}')
+soma_pesos = cont = 0
+while not s.isEmpty():
+    peso_retirado = s.pop()
+    print(f'Peso retirado: {peso_retirado}')
+    soma_pesos += peso_retirado
+    cont += 1
+    if peso_retirado == peso_desejado:   
+        break
+
+print(f'Anilhas retiradas: {cont}')
+print(f'Peso total movimentado: {soma_pesos}')
