@@ -14,13 +14,13 @@ class Stack:
         self.items.append(item)
 
     def pop(self):
-        if self.items == []:
+        if self.isEmpty():
             return
         else:
             return self.items.pop()
 
     def peek(self):
-        if self.items == []:
+        if self.isEmpty():
             return
         else:
             return self.items[-1]
